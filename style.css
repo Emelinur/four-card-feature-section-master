@@ -1,0 +1,53 @@
+:root {
+  /* Color */
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --blue: hsl(212, 86%, 64%);
+  --orange: hsl(34, 97%, 64%);
+
+  /* Tpografi */
+  --ff:"Poppins" sans-serif;
+  --fs-1: 2.25rem; /* Poppins Semibold */
+  --fs-2: 2.25rem; /* Poppins Extra Light */
+  --fs-3: 1.25rem;
+  --fs-4: 0.9375rem; /* Poppins Regular */
+  --fs-5: 0.8125rem;
+
+  --line-height: 1.4;
+  --line-height-2: 1.6;
+  --line-height-1: 1.35;
+  --letter-spacing: 0.007em;
+  --letter-spacing-1: 0;
+
+  /* Spacing */
+  /* preferred = minPx + ( (maxPx - minPx)*(100vh-minpx) / (1440px - 375px) ) */
+  --v: clamp(0, (100vw - 375px) / (1440px - 375px), 1);
+  --space-500: clamp(0.5rem, calc(0.5rem + 2rem * var(--v)), 2.5rem);
+  --space-400: clamp(0.5rem, calc(0.5rem + 1.5rem * var(--v)), 2rem);
+  --space-300: clamp(0.5rem, calc(0.5rem + 1rem * var(--v)), 1.5rem);
+  --space-200: clamp(0.5rem, calc(0.5rem + 0.5rem * var(--v)), 1rem);
+  --space-100: 0.5rem;
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-size: var(--ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ height:100vh;
+
+}
+main{
+  width: 50rem;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+}
