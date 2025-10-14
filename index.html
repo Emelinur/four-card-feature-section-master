@@ -4,22 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet" />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Four card feature section</title>
 
     <!-- sadece yardımcı stiller -->
     <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
       /* Ekran okuyucuya görünür, ekranda görünmez başlık için */
-      .sr-only{
-        position:absolute; width:1px; height:1px; padding:0; margin:-1px;
-        overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
     </style>
   </head>
@@ -37,28 +57,53 @@
       <section class="card-wrapper" aria-label="Features">
         <h2 class="sr-only">Features</h2>
 
-        <article class="card card--teal">
+        <article class="card card-supervisor">
           <h3>Supervisor</h3>
           <p>Monitors activity to identify project roadblocks</p>
-          <img src="images/icon-supervisor.svg" alt="" aria-hidden="true" loading="lazy">
+          <img
+            src="images/icon-supervisor.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
         </article>
 
-        <article class="card card--red">
+        <article class="card card-team">
           <h3>Team Builder</h3>
-          <p>Scans our talent network to create the optimal team for your project</p>
-          <img src="images/icon-team-builder.svg" alt="" aria-hidden="true" loading="lazy">
+          <p>
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <img
+            src="images/icon-team-builder.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
         </article>
 
-        <article class="card card--yellow">
+  
+
+        <article class="card card-calculator">
+          <h3>Calculator</h3>
+          <p>
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <img
+            src="images/icon-calculator.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+        </article>
+              <article class="card card-karma">
           <h3>Karma</h3>
           <p>Regularly evaluates our talent to ensure quality</p>
-          <img src="images/icon-karma.svg" alt="" aria-hidden="true" loading="lazy">
-        </article>
-
-        <article class="card card--blue">
-          <h3>Calculator</h3>
-          <p>Uses data from past projects to provide better delivery estimates</p>
-          <img src="images/icon-calculator.svg" alt="" aria-hidden="true" loading="lazy">
+          <img
+            src="images/icon-karma.svg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
         </article>
       </section>
     </main>
@@ -66,8 +111,9 @@
     <footer>
       <p class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </footer>
   </body>

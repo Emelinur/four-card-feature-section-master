@@ -9,7 +9,7 @@
   --orange: hsl(34, 97%, 64%);
 
   /* Tpografi */
-  --ff:"Poppins" sans-serif;
+  --ff: "Poppins", sans-serif;
   --fs-1: 2.25rem; /* Poppins Semibold */
   --fs-2: 2.25rem; /* Poppins Extra Light */
   --fs-3: 1.25rem;
@@ -22,6 +22,8 @@
   --letter-spacing: 0.007em;
   --letter-spacing-1: 0;
 
+  --radius: 0.5rem;
+
   /* Spacing */
   /* preferred = minPx + ( (maxPx - minPx)*(100vh-minpx) / (1440px - 375px) ) */
   --v: clamp(0, (100vw - 375px) / (1440px - 375px), 1);
@@ -32,16 +34,76 @@
   --space-100: 0.5rem;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
-body{
+body {
   margin: 0;
   padding: 0;
-  font-size: var(--ff);
+  font-family: var(--ff);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
- height:100vh;
+  height: 100svh;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: var(--space-400);
+  background-color: hsl(0, 50%, 94%);
+}
+.title-wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 33.75rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.title-wrapper h1 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--fs-2);
+  color: var(--grey-500);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 200;
+}
 
+.title-wrapper h2 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--fs-1);
+  color: var(--grey-500);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 600;
+}
+
+.title-wrapper p {
+  margin: 0;
+  padding: 0;
+  font-size: var(--fs-4);
+  color: var(--grey-500);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing-1);
+  font-weight: 400;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 21.875rem);
+  grid-template-rows: repeat(2, 15.625rem);
+}
+.card-supervisor:first-child {
+   margin: 0;
+  padding: 0;
+  display: grid;
+  grid-row: span 2;
+  border-top: 2px solid var(--cyan);
+  border-radius: var(--radius);
 }
