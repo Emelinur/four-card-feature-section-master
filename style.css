@@ -47,6 +47,10 @@ body {
   gap: var(--space-500);
   margin: 0;
 }
+.title-wrapper{
+  width: 100%;
+  text-align: center;
+}
 .title-wrapper h1 {
   margin: 0;
   padding: 0;
@@ -129,25 +133,52 @@ body {
   border-top: 2px solid var(--orange);
 }
 
-@media (min-width: 23.4375rem) {
+@media (max-width: 23.4375rem) {
   .container {
-    max-width: 19.75rem;
+    min-width: 19.75rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    gap: var(--space-500);
+    gap:2rem;
+   padding: 3rem;
+
   }
-  .title-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+  
   .card-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    gap: var(--space-400);
+    gap:2rem;
+  
   }
+
+
+  .card-supervisor {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2 ;
+  border-top: 2px solid var(--cyan);
 }
+
+.card-team {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border-top: 2px solid var(--red);
+}
+.card-calculator {
+  display: grid;
+  grid-column: 1;
+  grid-row: 4;
+  border-top: 2px solid var(--blue);
+  align-self: center;
+}
+.card-karma {
+  display: grid;
+  grid-column: 1;
+  grid-row: 3;
+  border-top: 2px solid var(--orange);
+}
+
+}
+
