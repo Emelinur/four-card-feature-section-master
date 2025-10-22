@@ -19,13 +19,7 @@
   --letter-spacing: 0.007em;
   --letter-spacing-1: 0;
   --radius: 0.5rem;
-  --shadow-50: 0 4px 4px rgba(0, 0, 0, 0.25); /* Spacing */ /* preferred = minPx + ( (maxPx - minPx)*(100vh-minpx) / (1440px - 375px) ) */
-  --v: clamp(0, (100vw - 375px) / (1440px - 375px), 1);
-  --space-500: clamp(0.5rem, calc(0.5rem + 2rem * var(--v)), 2.5rem);
-  --space-400: clamp(0.5rem, calc(0.5rem + 1.5rem * var(--v)), 2rem);
-  --space-300: clamp(0.5rem, calc(0.5rem + 1rem * var(--v)), 1.5rem);
-  --space-200: clamp(0.5rem, calc(0.5rem + 0.5rem * var(--v)), 1rem);
-  --space-100: 0.5rem;
+  --shadow-50: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 * {
   box-sizing: border-box;
@@ -37,18 +31,15 @@ body {
   min-height: 100svh;
   display: grid;
   grid-template-rows: 1fr;
-  margin: 0;
 }
 .container {
-  max-width: 69.625rem;
+  width: 69.625rem;
   display: grid;
   justify-content: center;
   place-self: center;
-  gap: var(--space-500);
-  margin: 0;
+  gap: 2rem;
 }
 .title-wrapper {
- 
   text-align: center;
 }
 .title-wrapper h1 {
@@ -74,20 +65,18 @@ body {
   letter-spacing: var(--letter-spacing-1);
   font-weight: 400;
 }
-.card-wrapper{
+.card-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: var(--space-500);
-  
+  gap: 2rem;
 }
 .card {
-  min-width: 21.875rem;
-  min-height: 15.625rem;
+  width: 21.875rem;
+  height: 15.625rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow-50);
   align-self: center;
   padding: 2rem;
+  overflow: hidden;
 }
 
 .card h3 {
@@ -107,7 +96,6 @@ body {
   justify-content: end;
 }
 
-
 .card-supervisor {
   display: grid;
   grid-column: 1;
@@ -117,8 +105,8 @@ body {
 
 .card-team {
   display: grid;
-  grid-column: 2 ;
-  grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
   border-top: 2px solid var(--red);
   justify-self: center;
 }
@@ -135,28 +123,36 @@ body {
   border-top: 2px solid var(--orange);
 }
 
-@media (23.4375rem<= width < 48rem) {
+@media (width < 45rem) {
   .container {
-    max-width: 19.75rem;
+    width: 19.75rem;
     display: grid;
     padding: 2rem;
   }
   .title-wrapper h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.5rem;
-  color: var(--grey-500);
-  line-height: var(--line-height);
-  letter-spacing: var(--letter-spacing);
-  font-weight: 200;
-}
-.title-wrapper h2 {
-  font-size: 1.5rem;
-  color: var(--grey-500);
-  line-height: var(--line-height);
-  letter-spacing: var(--letter-spacing);
-  font-weight: 600;
-}
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    color: var(--grey-500);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 200;
+  }
+  .title-wrapper h2 {
+    font-size: 1.5rem;
+    color: var(--grey-500);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 600;
+  }
+  .card {
+    width: 19.625rem;
+    height: 15.625rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-50);
+    align-self: center;
+    padding: 2rem;
+  }
 
   .card-wrapper {
     display: grid;
@@ -175,7 +171,7 @@ body {
   .card-team {
     display: grid;
     grid-column: 1;
-    grid-row:1;
+    grid-row: 1;
     border-top: 2px solid var(--red);
   }
   .card-calculator {
@@ -192,53 +188,48 @@ body {
     border-top: 2px solid var(--orange);
   }
 }
-@media (48rem<= width < 69.625rem) {
-    .container {
-      width:41,25rem ;
-      display: grid;
-    max-width: 41,25rem;
-  
+@media (45rem<= width < 69.625rem) {
+  .container {
+    width: 45rem;
   }
- 
- .card-wrapper{
-  display:grid;
-   
-    
-place-content: start space-between;
-      gap: 2rem;
 
+  .card {
+    max-width: 19.625rem;
+    max-height: 15.625rem;
   }
+  .card-wrapper {
+    width: 41.25rem;
+  }
+
   .card-supervisor {
     display: grid;
     grid-column: 2;
     grid-row: 2;
     border-top: 2px solid var(--cyan);
     align-self: center;
-    justify-self:end;
+    justify-self: end;
   }
 
   .card-team {
     display: grid;
- grid-column: 2 / span 2;
- width: 350px;
+    grid-column: 2 / span 2;
     grid-row: 1;
     border-top: 2px solid var(--red);
-    justify-self:center ;
+    justify-self: center;
     align-self: center;
   }
   .card-calculator {
     display: grid;
-     width: 350px;
-    grid-column: 2/ span 2;
+    grid-column: 2 / span 2;
     grid-row: 3;
     border-top: 2px solid var(--blue);
-     justify-self:center ;
+    justify-self: center;
     align-self: center;
   }
   .card-karma {
     display: grid;
-    grid-column: 3 ;
-    grid-row: 2 ;
+    grid-column: 3;
+    grid-row: 2;
     border-top: 2px solid var(--orange);
   }
 }
